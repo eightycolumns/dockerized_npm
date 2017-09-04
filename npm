@@ -1,0 +1,6 @@
+#!/bin/bash
+
+readonly IMAGE=eightycolumns/npm:3.10.10
+readonly WORKDIR=/home/node/app
+
+docker run -itv "${PWD}:${WORKDIR}" --rm "${IMAGE}" "$@"
