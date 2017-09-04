@@ -3,4 +3,4 @@
 readonly IMAGE=eightycolumns/npm:3.10.10
 readonly WORKDIR=/home/node/app
 
-docker run -itv "${PWD}:${WORKDIR}" --rm "${IMAGE}" "$@"
+docker run -it -p 3000:3000 -v "${PWD}:${WORKDIR}" --rm "${IMAGE}" "$@"
